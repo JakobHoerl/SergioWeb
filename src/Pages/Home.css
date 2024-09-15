@@ -1,0 +1,105 @@
+.homeContainer {
+  max-width: 800px;
+  padding: 20px;
+  margin-left: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: absolute; /* For potential overlay */
+  z-index: 2; /* Bring the content above the background */
+  background-color: transparent;
+  margin-top: 150px;
+}
+
+.background {
+  background-image: url("../images/Background.jpg"); /* Correct path */
+  height: 80vh; /* Full height */
+  width: 60%; /* Set to 50% width */
+  background-size: 80%;
+  background-size: cover; /* Ensures the image covers the entire element */
+  background-position: right; /* Align the background image to the right */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  position: absolute; /* Ensures it's positioned relative to the page */
+  right: 0; /* Aligns the element to the right of the screen */
+  display: flex; /* Makes it a flex container */
+  justify-content: flex-end; /* Align content to the right inside the container */
+  align-items: center; /* Center items vertically */
+  margin-top: 40px;
+}
+
+.homeHeading,
+.homeParagraph,
+.homeList,
+.homeListItem {
+  color: white; /* Make text color white for visibility */
+}
+
+.homeHeading {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.homeParagraph {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  background-color: transparent;
+}
+
+.homeList {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.homeListItem {
+  font-size: 1.1rem;
+  padding: 10px 0;
+  display: flex; /* Added to align checkmark and text */
+  align-items: center; /* Align vertically */
+}
+
+.checkmark {
+  margin-right: 10px; /* Space between checkmark and text */
+}
+.gradientButton {
+  background: linear-gradient(
+    90deg,
+    #f1c40f,
+    #e74c3c
+  ); /* Yellow to red gradient */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease; /* Smooth transition for hover */
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gradientButton:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttonContainer {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Space between buttons */
+}
+
+@media (max-width: 600px) {
+  .homeHeading {
+    font-size: 2rem;
+  }
+  .homeParagraph {
+    font-size: 1rem;
+  }
+  .homeListItem {
+    font-size: 1rem;
+  }
+}
